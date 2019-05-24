@@ -34,7 +34,7 @@ Pong can be played with one person or even two! However, the project will be inc
 - Increase speed of ball as time goes on
 - Paddle eating the ball fix
 - Score limit method
-- Single player option?!
+- Single player option?
 - Bot implementation?
 - Powerups?
 - Custom paddle color customization?
