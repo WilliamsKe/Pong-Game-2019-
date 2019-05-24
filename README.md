@@ -14,11 +14,11 @@ Pong can be played with one person or even two! However, the project will be inc
 **Weekly Milestones**
 
 **WEEK ONE 5/20 to 5/24**
-*- [x] 5/20 Project was created*
-*- [x] 5/20 Ellipse (ball) and paddles were created and moving correctly*
-*- [x] 5/21 Collision boolean configuration*
-*- [x] 5/22 Ball traveling in opposite direction configuration*
-*- [x] 5/23 Scoreboard was created*
+- [x] 5/20 Project was created
+- [x] 5/20 Ellipse (ball) and paddles were created and moving correctly
+- [x] 5/21 Collision boolean configuration
+- [x] 5/22 Ball traveling in opposite direction configuration
+- [x] 5/23 Scoreboard was created
 
 **WEEK TWO 5/27 to 5/31**
 
