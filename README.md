@@ -24,10 +24,10 @@ Pong can be played with one person or even two! However, the project will be inc
 
 
 **CHECKLIST**
-~~- Create the ball and paddle~~
-~~- Collision with paddle and ball configured~~
-~~- Ball traveling in opposite direction configuration~~
-~~- Scoreboard was created~~
+- [x] Create the ball and paddle
+- [x] Collision with paddle and ball configured
+- [x] Ball traveling in opposite direction configuration
+- [x] Scoreboard was created
 - Introduction screen (if mousepressed == true)
 - Finish scoreboard and reset function 
 - Paddle moving off the screen fix
