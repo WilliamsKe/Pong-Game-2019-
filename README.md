@@ -2,7 +2,7 @@
 
 **Hey!**
 Credits:
-*Sara Charboneau*
+*Sara Charboneau*,
 *Keelan Williams*
 
 **Introduction**
