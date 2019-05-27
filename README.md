@@ -28,12 +28,11 @@ Pong can be played with one person or even two! However, the project will be inc
 - [x] Collision with paddle and ball configured
 - [x] Ball traveling in opposite direction configuration
 - [x] Scoreboard was created
-- Introduction screen (if mousepressed == true)
-- Finish scoreboard and reset function 
+- Introduction screen (if mousepressed == true) 50% done
+- [x] Finish scoreboard and reset function 
 - Paddle moving off the screen fix
 - Increase speed of ball as time goes on
 - Paddle eating the ball fix
-- Score limit method
 - Single player option?
 - Bot implementation?
 - Powerups?
