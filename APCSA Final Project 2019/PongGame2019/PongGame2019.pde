@@ -1,9 +1,10 @@
+boolean startGame = false;
 float ballX = 500;
 float ballY = 300;
 float ballR = 10;
 
-float dX = random(3, 5);
-float dY = random(3, 5);
+float dX = random(3, 3);
+float dY = random(3, 3);
 float paddleX1;
 float paddleY1 = 10;
 float paddleW1 = 20;
@@ -14,12 +15,17 @@ float paddleW2 = 20;
 float paddleH2 = 60;
 int score1 = 0;
 int score2 = 0;
+String start = "Press the spacebar to start!";
+String paddleCtrl1 = "Left paddle controls: W & S";
+String paddleCtrl2 = "Right paddle controls: up & down arrow keys";
+
 void setup() {
   background(66, 69, 65);
   size(1000, 600);
   paddleX1 = width - 25;
   paddleX2 = 1;
 }
+
 
 void draw() {
   background(0);
@@ -32,15 +38,19 @@ void draw() {
   fill(255, 255, 255);
   rect(500, 0, 2, 1200);
   border();
-  display();
+  scoreBoard();
+
   ballX = ballX + dX;
   ballY = ballY + dY;
 
   // if paddle1 scores
   if (ballRight() > width) {
-    display();
-    noLoop();
+    scoreBoard();
     score1++;
+    ballX = 500;
+    ballY = 300;
+    ballX += dX;
+    ballY += dY;
   }  
   // Boolean condition determining if ball and paddle come into contact and switch directions
   if (collision()) {
@@ -49,9 +59,13 @@ void draw() {
 
   // If paddle2 scores
   if (ballLeft() < 0) {
-    display();
+    scoreBoard();
+    ballX = 500;
+    ballY = 300;
+    ballX += dX;
+    ballY += dY;
     dX = -dX;
-    noLoop();
+    score2++;
   }
 
   if (ballBottom() > height) {
@@ -69,18 +83,18 @@ void border() {
   }
 }
 
-int display() {
+void scoreBoard() {
   String s = ""+score1+"  "+ " "+score2;
   fill(255, 255, 255);
   textSize(30);
   text(s, 470, 25);
-  score1++;
-  if (ballLeft() < 0) {
-    score2++;
-  }
-  return score1;
+  updateScore();
 }
 
+int updateScore() {
+  int a = 0;
+  return a;
+}
 // If the ball and paddle come into contact
 boolean collision() {
   boolean returnValue = false;
@@ -113,15 +127,18 @@ float ballTop() {
 float ballBottom() {
   return ballY + ballR;
 }
+
 void keyPressed() {
   if (key == CODED) {
+    if (key == ' ') {
+      draw();
+    }
     if (keyCode == UP) {
       paddleY1 = paddleY1 - paddleH1;
     } else if (keyCode == DOWN) {
       paddleY1 = paddleY1 + paddleH1;
     }
   }
-
   if (key == 'w') {
     paddleY2 = paddleY2 - paddleH2;
   }
