@@ -39,12 +39,13 @@ void setup() {
 
 // The whole game
 void draw() {
-  background(0);
+  background(66, 69, 65);
   ellipse(ballX, ballY, 20, 20);
-  fill(255, 255, 255);
+  fill(255);
   rect(paddleX1, paddleY1, paddleWidth1, paddleHeight1);
   rect(paddleX2, paddleY2, paddleWidth2, paddleHeight2);
-  fill(255, 255, 255);
+  fill(255);
+  // line in the middle
   rect(500, 0, 2, 1200);
   border();
   scoreBoard();
@@ -103,7 +104,7 @@ void scoreBoard() {
 
 }
 
-// If the ball and paddle come into contact
+// If the ball and paddle come into contact - William Doane
 boolean collision() {
   boolean returnValue = false;
   if ((moveRight() > paddleX1) && (moveLeft() < paddleX1 + paddleWidth1)) {
