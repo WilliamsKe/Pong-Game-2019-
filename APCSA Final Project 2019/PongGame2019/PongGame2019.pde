@@ -14,11 +14,11 @@ float moveY = 5;
 float paddleX1;
 float paddleY1 = 50;
 float paddleWidth1 = 20;
-float paddleHeight1 = 60;
+float paddleHeight1 = 70;
 float paddleX2;
 float paddleY2 = 50;
 float paddleWidth2 = 20;
-float paddleHeight2 = 60;
+float paddleHeight2 = 70;
 
 // Score variables
 int score1 = 0;
@@ -31,7 +31,7 @@ String paddleCtrl2 = "Right paddle controls: up & down arrow keys";
 
 // Creating the screen and the paddles set up correctly
 void setup() {
-  background(66, 69, 65);
+  background(0);
   size(1000, 600);
   paddleX1 = 978;
   paddleX2 = 1;
@@ -39,7 +39,7 @@ void setup() {
 
 // The whole game
 void draw() {
-  background(66, 69, 65);
+  background(0);
   ellipse(ballX, ballY, 20, 20);
   fill(255);
   rect(paddleX1, paddleY1, paddleWidth1, paddleHeight1);
@@ -98,7 +98,7 @@ void border() {
 // Scoreboard and displaying proper score of the game
 void scoreBoard() {
   String s = ""+score1+"  "+ " "+score2;
-  fill(255, 255, 255);
+  fill(255);
   textSize(30);
   text(s, 470, 25);
 
@@ -140,9 +140,6 @@ float moveBottom() {
 // Control configurations
 void keyPressed() {
   if (key == CODED) {
-    if (key == ' ') {
-      draw();
-    }
     if (keyCode == UP) {
       paddleY1 = paddleY1 - paddleHeight1;
     } else if (keyCode == DOWN) {
